@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red255\green255\blue255;\red200\green205\blue211;\red200\green204\blue211;\red0\green0\blue0;\red255\green255\blue255;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c0\c1\c1;
+\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c82383\c83963\c85905;\cssrgb\c82278\c83855\c85900;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\f0\b\fs72 \cf2 \cb3 \ul \ulc2 Report:
+\fs48 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs36 \cf2 \ulc2 I-app.py:
+\fs48 \cf4 \cb5 \ulnone \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f1\b0\fs28 \cf2 \expnd0\expndtw0\kerning0
+Le fichier 1 appel\'e9 app.py contient un programme \'e9crit en Python, qui impl\'e9mente une interface graphique pour g\'e9rer un stock de produits. Il utilise la biblioth\'e8que Tkinter pour cr\'e9er l'interface graphique et le module Connection du fichier model.py pour communiquer avec une base de donn\'e9es MySql.\
+\cf4 Le programme commence par d\'e9finir une variable ID comme None et une instance de la classe Connection, cr\'e9\'e9e dans le module Connection et nomm\'e9e conn. Ensuite, la m\'e9thode connect() de cette instance est appel\'e9e pour \'e9tablir la connexion avec la base de donn\'e9es.\
+Ensuite, le programme d\'e9finit plusieurs m\'e9thodes pour impl\'e9menter les fonctionnalit\'e9s de l'application, telles que la recherche de produits, l'ajout, la mise \'e0 jour et la suppression de produits, ainsi que la s\'e9lection d'un produit dans la liste des produits affich\'e9e dans l'interface graphique.\
+Le programme cr\'e9e ensuite l'interface graphique en utilisant Tkinter, en d\'e9finissant une fen\'eatre principale (frame) et en ajoutant des \'e9l\'e9ments tels que des boutons, des \'e9tiquettes et des entr\'e9es pour interagir avec l'utilisateur. Il utilise \'e9galement le widget Treeview de Tkinter pour afficher la liste des produits stock\'e9s dans la base de donn\'e9es.\
+La m\'e9thode show() est \'e9galement d\'e9finie pour afficher la liste compl\'e8te des produits dans le Treeview chaque fois que la fen\'eatre est rafra\'eechie ou r\'e9initialis\'e9e.\
+Le programme utilise \'e9galement le module tkinter.messagebox pour afficher des messages d'information \'e0 l'utilisateur, tels que la confirmation de la suppression ou l'ajout r\'e9ussi d'un produit.\
+Enfin, le programme cr\'e9e la fen\'eatre principale (frame) et d\'e9finit ses dimensions et son titre.\
+\pard\pardeftab720\partightenfactor0
+\cf4 En somme, ce programme impl\'e9mente une interface graphique pour la gestion de stock de produits, en utilisant Tkinter pour l'interface graphique et MySql pour la base de donn\'e9es. Il permet \'e0 l'utilisateur d'ajouter, de supprimer, de mettre \'e0 jour et de rechercher des produits et fournit des commentaires d'information en cons\'e9quence.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf8 \cb9 \kerning1\expnd0\expndtw0 \ul \ulc8 II-model.py:
+\f1\b0\fs28 \cf8 \cb5 \ulnone \
+Le fichier 2 est appel\'e9 "model.py". Il contient une classe "Connection" qui permet de se connecter \'e0 une base de donn\'e9es MySQL. La classe a les attributs "host", "database", "user", "password" et "port" qui sont utilis\'e9s pour configurer la connexion \'e0 la base de donn\'e9es. Elle a \'e9galement les attributs "conn" et "cursor" qui sont utilis\'e9s pour effectuer des op\'e9rations sur la base de donn\'e9es. \
+\
+La classe a plusieurs m\'e9thodes pour interagir avec la table "products" de la base de donn\'e9es :\
+- "connect()" permet de se connecter \'e0 la base de donn\'e9es.\
+- "disconnect()" permet de se d\'e9connecter de la base de donn\'e9es.\
+- "getAll()" permet de r\'e9cup\'e9rer toutes les donn\'e9es de la table "products".\
+- "search(id)" permet de rechercher un produit en fonction de son identifiant.\
+- "add(id, name, quantity, price)" permet d'ajouter un nouveau produit \'e0 la table "products".\
+- "update(name, quantity, price, id)" permet de mettre \'e0 jour les informations d'un produit existant.\
+- "delete(id)" permet de supprimer un produit de la table "products".}
