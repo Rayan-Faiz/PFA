@@ -40,15 +40,15 @@ class Connection:
         products=self.cursor.fetchall()
         return products
 
-    def add(self,id, name, quantity, price):
-        req=f"insert into {self.table} (id, name, quantity, price)values(%s, %s, %s, %s)"
-        values=(id, name, quantity, price)
+    def add(self,id, name, quantity, price, eDate, rDate):
+        req=f"insert into {self.table} (id, name, quantity, price, entry_Date, release_Date)values(%s, %s, %s, %s, %s, %s)"
+        values=(id, name, quantity, price, eDate, rDate)
         self.cursor.execute(req,values)
         self.conn.commit()
 
-    def update(self, name, quantity, price, id):
-        req=f"update {self.table} set name=%s, quantity=%s, price=%s where id=%s"
-        values=(name, quantity, price, id)
+    def update(self, name, quantity, price, eDate, rDate, id):
+        req=f"update {self.table} set name=%s, quantity=%s, price=%s, entry_Date=%s, release_Date=%s where id=%s"
+        values=(name, quantity, price, eDate, rDate, id)
         self.cursor.execute(req,values)
         self.conn.commit()
 
