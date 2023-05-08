@@ -8,7 +8,7 @@ def connect_db():
         messagebox.showerror('Erreur','Veuillez remplire tous les inputs')
     else:
         try:
-            conn=mysql.connector.connect(host='localhost',user='root',password='root',database='database',port='8889')
+            conn=mysql.connector.connect(host='localhost',user='root',password='',database='database',port='3306')
             cursor=conn.cursor()
         except:
             messagebox.showerror('erreur', 'connexion non etabli')
@@ -29,7 +29,9 @@ def connect_db():
     else:
         messagebox.showerror('erreur','identifiant non reconnu')
 
-
+def reg_form():
+    root.destroy()
+    import register
 root=Tk()
 root.title('login')
 root.geometry('650x750+300+200')
@@ -83,5 +85,5 @@ passw.bind('<FocusIn>', on_enter)
 passw.bind('<FocusOut>', on_leave)
 #########################
 Button(frame,width=39,pady=7,text='Connexion',bg='gray',fg='black',border=5,command=connect_db).place(x=27,y=250)
-
+Button(frame,width=39,pady=7,text="Page d'inscription",bg='gray',fg='black',border=5,command=reg_form).place(x=27,y=290)
 root.mainloop()
